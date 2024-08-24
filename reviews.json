@@ -1,0 +1,184 @@
+{
+  "reviews": [
+    {
+      "Company": "Google",
+      "Work-Life Balance": "Excellent",
+      "Compensation and Benefits": "Highly competitive",
+      "Career Growth and Development Opportunities": "Abundant",
+      "Company Culture": "Innovative and collaborative",
+      "Leadership and Management": "Visionary",
+      "Stars": 5
+    },
+    {
+      "Company": "Apple",
+      "Work-Life Balance": "Good",
+      "Compensation and Benefits": "Very competitive",
+      "Career Growth and Development Opportunities": "Plentiful",
+      "Company Culture": "Fast-paced and creative",
+      "Leadership and Management": "Strong",
+      "Stars": 4
+    },
+    {
+      "Company": "Amazon",
+      "Work-Life Balance": "Challenging",
+      "Compensation and Benefits": "Competitive",
+      "Career Growth and Development Opportunities": "Numerous",
+      "Company Culture": "Fast-paced and results-driven",
+      "Leadership and Management": "Data-driven",
+      "Stars": 3
+    },
+    {
+      "Company": "Microsoft",
+      "Work-Life Balance": "Very good",
+      "Compensation and Benefits": "Excellent",
+      "Career Growth and Development Opportunities": "Extensive",
+      "Company Culture": "Collaborative and inclusive",
+      "Leadership and Management": "Transformative",
+      "Stars": 4
+    },
+    {
+      "Company": "Facebook",
+      "Work-Life Balance": "Good",
+      "Compensation and Benefits": "Highly competitive",
+      "Career Growth and Development Opportunities": "Significant",
+      "Company Culture": "Move fast and innovative",
+      "Leadership and Management": "Visionary but controversial",
+      "Stars": 4
+    },
+    {
+      "Company": "Netflix",
+      "Work-Life Balance": "Demanding",
+      "Compensation and Benefits": "Top-tier",
+      "Career Growth and Development Opportunities": "Challenging and rewarding",
+      "Company Culture": "High-performance",
+      "Leadership and Management": "Direct and transparent",
+      "Stars": 4
+    },
+    {
+      "Company": "Tesla",
+      "Work-Life Balance": "Intense",
+      "Compensation and Benefits": "Competitive",
+      "Career Growth and Development Opportunities": "Cutting-edge",
+      "Company Culture": "Fast-paced and innovative",
+      "Leadership and Management": "Visionary but demanding",
+      "Stars": 3
+    },
+    {
+      "Company": "IBM",
+      "Work-Life Balance": "Good",
+      "Compensation and Benefits": "Solid",
+      "Career Growth and Development Opportunities": "Stable",
+      "Company Culture": "Traditional but evolving",
+      "Leadership and Management": "Experienced",
+      "Stars": 3
+    },
+    {
+      "Company": "Intel",
+      "Work-Life Balance": "Balanced",
+      "Compensation and Benefits": "Competitive",
+      "Career Growth and Development Opportunities": "Good",
+      "Company Culture": "Innovative and collaborative",
+      "Leadership and Management": "Stable",
+      "Stars": 4
+    },
+    {
+      "Company": "Adobe",
+      "Work-Life Balance": "Very good",
+      "Compensation and Benefits": "Competitive",
+      "Career Growth and Development Opportunities": "Excellent",
+      "Company Culture": "Creative and supportive",
+      "Leadership and Management": "Visionary",
+      "Stars": 4
+    },
+    {
+      "Company": "Salesforce",
+      "Work-Life Balance": "Good",
+      "Compensation and Benefits": "Excellent",
+      "Career Growth and Development Opportunities": "Abundant",
+      "Company Culture": "Philanthropic and innovative",
+      "Leadership and Management": "Inspirational",
+      "Stars": 5
+    },
+    {
+      "Company": "Oracle",
+      "Work-Life Balance": "Decent",
+      "Compensation and Benefits": "Competitive",
+      "Career Growth and Development Opportunities": "Good",
+      "Company Culture": "Results-oriented",
+      "Leadership and Management": "Experienced",
+      "Stars": 3
+    },
+    {
+      "Company": "Uber",
+      "Work-Life Balance": "Challenging",
+      "Compensation and Benefits": "Competitive",
+      "Career Growth and Development Opportunities": "Fast-paced",
+      "Company Culture": "Disruptive and ambitious",
+      "Leadership and Management": "Dynamic",
+      "Stars": 3
+    },
+    {
+      "Company": "Airbnb",
+      "Work-Life Balance": "Good",
+      "Compensation and Benefits": "Attractive",
+      "Career Growth and Development Opportunities": "Innovative",
+      "Company Culture": "Inclusive and mission-driven",
+      "Leadership and Management": "Responsive",
+      "Stars": 4
+    },
+    {
+      "Company": "LinkedIn",
+      "Work-Life Balance": "Excellent",
+      "Compensation and Benefits": "Very competitive",
+      "Career Growth and Development Opportunities": "Plentiful",
+      "Company Culture": "Professional and supportive",
+      "Leadership and Management": "Approachable",
+      "Stars": 5
+    },
+    {
+      "Company": "Twitter",
+      "Work-Life Balance": "Good",
+      "Compensation and Benefits": "Competitive",
+      "Career Growth and Development Opportunities": "Decent",
+      "Company Culture": "Open and flexible",
+      "Leadership and Management": "Evolving",
+      "Stars": 3
+    },
+    {
+      "Company": "SpaceX",
+      "Work-Life Balance": "Demanding",
+      "Compensation and Benefits": "Competitive",
+      "Career Growth and Development Opportunities": "Cutting-edge",
+      "Company Culture": "Ambitious and fast-paced",
+      "Leadership and Management": "Visionary but intense",
+      "Stars": 4
+    },
+    {
+      "Company": "Nvidia",
+      "Work-Life Balance": "Good",
+      "Compensation and Benefits": "Highly competitive",
+      "Career Growth and Development Opportunities": "Excellent",
+      "Company Culture": "Innovative and collaborative",
+      "Leadership and Management": "Visionary",
+      "Stars": 5
+    },
+    {
+      "Company": "Shopify",
+      "Work-Life Balance": "Very good",
+      "Compensation and Benefits": "Competitive",
+      "Career Growth and Development Opportunities": "Abundant",
+      "Company Culture": "Entrepreneurial and supportive",
+      "Leadership and Management": "Inspiring",
+      "Stars": 4
+    },
+    {
+      "Company": "Zoom",
+      "Work-Life Balance": "Good",
+      "Compensation and Benefits": "Competitive",
+      "Career Growth and Development Opportunities": "Growing",
+      "Company Culture": "Fast-paced and adaptive",
+      "Leadership and Management": "Responsive",
+      "Stars": 4
+    }
+  ]
+}
