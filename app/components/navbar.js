@@ -1,5 +1,5 @@
-import { AppBar, Toolbar, Button, Box, ThemeProvider } from "@mui/material";
-import Theme from "./theme";
+import { AppBar, Toolbar, Button, Box, ThemeProvider } from '@mui/material';
+import Theme from './theme';
 import {
   SignedIn,
   SignedOut,
@@ -7,29 +7,17 @@ import {
   isSignedIn,
   useAuth,
   ClerkProvider,
-} from "@clerk/nextjs";
-import { useRouter } from "next/navigation";
-import React, { useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
+} from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
+import React, { useEffect } from 'react';
 
 const Navbar = () => {
   const router = useRouter();
-  //   const { isSignedIn } = useAuth();
-
-  const handleRedirectLoginPage = () => {
-    router.push("/sign-in");
-  };
-
-  const handleRedirectSignupPage = () => {
-    router.push("/sign-up");
-  };
-
   const handleRedirectChatbot = () => {
-    router.push("/chatbot");
+    router.push('/chatbot');
   };
   const handleRedirectContactUs = () => {
-    router.push("/contact-us");
+    router.push('/contact-us');
   };
 
   // __________________________ redirect if signed in_____________________
@@ -52,7 +40,7 @@ const Navbar = () => {
         position="static"
         sx={{
           backgroundColor: Theme.palette.primary.main,
-          boxShadow: "none",
+          boxShadow: 'none',
         }}
       >
         <Toolbar>
@@ -73,17 +61,38 @@ const Navbar = () => {
                 />
               </a>
             </Box>
-            <Button
-              variant="outlined"
-              sx={{
-                borderRadius: "16px",
-                boxShadow: "none",
-                backgroundColor: Theme.palette.primary.dark,
-              }}
-              onClick={handleRedirectChatbot}
-            >
-              Chat with AI
-            </Button>
+            <Box>
+              <Button
+                variant="outlined"
+                sx={{
+                  borderRadius: '16px',
+                  boxShadow: 'none',
+                  fontFamily: 'Poppins',
+                  backgroundColor: Theme.palette.primary.dark,
+                  '&:hover': {
+                    bgcolor: Theme.palette.text.darker,
+                  },
+                }}
+                onClick={handleRedirectChatbot}
+              >
+                Chat with AI
+              </Button>
+              <Button
+                variant="outlined"
+                sx={{
+                  boxShadow: 'none',
+                  fontFamily: 'Poppins',
+                  color: Theme.palette.text.dark,
+                  textDecoration: 'none', // Ensure no underline by default
+                  '&:hover': {
+                    textDecoration: 'underline', // Add underline on hover
+                  },
+                }}
+                onClick={handleRedirectContactUs}
+              >
+                Contact US
+              </Button>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>

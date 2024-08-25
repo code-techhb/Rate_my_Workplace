@@ -1,6 +1,6 @@
-import { Box, Typography, Button, ThemeProvider } from "@mui/material";
+import { Box, Typography, Button, ThemeProvider } from '@mui/material';
 //import StarIcon from "@mui/icons-material/Star";
-import Theme from "./theme";
+import Theme from './theme';
 
 const Hero = () => {
   return (
@@ -15,25 +15,27 @@ const Hero = () => {
       >
         <Box
           display="flex"
-          flexDirection={{ xs: "column", sm: "row" }}
+          flexDirection={{ xs: 'column', sm: 'row' }}
           alignItems="center"
-          gap={10}
+          gap={1}
           mb={4}
         >
-          <Box sx={{ textAlign: "left", maxWidth: "500px" }}>
+          <Box sx={{ textAlign: 'left', maxWidth: '500px' }}>
             <Typography
               variant="h6"
               sx={{
                 marginTop: 2,
                 marginBottom: 2,
-                fontFamily: "Payton One",
-                fontSize: "60px",
-                fontWeight: "bold",
+                fontFamily: 'Paytone One',
+                fontSize: '68px',
+                fontWeight: 'bold',
+                color: Theme.palette.text.dark,
+                lineHeight: 1.3,
               }}
             >
-              Rate My professor
+              Rate My Workplace
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body1" fontSize={21}>
               Our AI-driven system extracts key concepts from your reading
               materials and converts them into smart flashcards tailored for
               effective studying.
@@ -42,12 +44,17 @@ const Hero = () => {
             <Button
               variant="contained"
               sx={{
-                marginTop: 2,
-                borderRadius: "16px",
-                bgcolor: "primary.purple",
-                "&:hover": {
-                  bgcolor: "primary.purple",
+                marginTop: 3,
+                width: '200px',
+                borderRadius: '16px',
+                fontFamily: 'Poppins',
+                fontSize: '16px',
+                color: Theme.palette.text.black,
+                bgcolor: Theme.palette.text.yellow,
+                '&:hover': {
+                  bgcolor: Theme.palette.text.darkYellow,
                 },
+                fontWeight: 700,
               }}
               href="/chatbot"
             >
@@ -55,14 +62,16 @@ const Hero = () => {
             </Button>
           </Box>
           {/* Image */}
+
           <Box
             component="img"
             src="/women_picture.png"
             sx={{
-              width: { xs: "70%", sm: "300px" },
-              height: "auto",
-              borderRadius: "10%",
-              boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.45)",
+              width: { xs: '70px', sm: '400px' },
+              height: 'auto',
+              alignItems: 'flex-end',
+              //borderRadius: '10%',
+              //boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.45)',
             }}
           />
         </Box>
