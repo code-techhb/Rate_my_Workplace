@@ -19,6 +19,13 @@ Maintain a friendly, professional and approachable tone, and tailor your languag
 // Post request
 export async function POST(req) {
   const data = await req.json();
+  const text2 = data[data.length - 1].content.toLowerCase(); // last message from the data
+
+  // Check for simple greetings
+  const greetings = ['hi', 'hello', 'hey'];
+  if (greetings.includes(text2)) {
+    return new NextResponse("Hi! How can I assist you today?");
+  }
 
   // pinecone client
   const pc = new Pinecone({
@@ -62,12 +69,12 @@ export async function POST(req) {
   });
 
   // construction of the conversation data
-  const lastMessage = data[data.length - 1];
+  const lastMessage = data[data.length-1];
   const lastMessageContent = lastMessage.content + resultString;
   const lastDataWithoutLastMessage = data.slice(0, data.length - 1);
-  console.log(lastMessage); //last message from the chatwindow
-  console.log(lastMessageContent); //result from vdb
-  console.log(lastDataWithoutLastMessage); // an array of last messages > assistant /
+  console.log("LastMEssage" + lastMessage); //last message from the chatwindow
+  console.log("lastMessageContent " + lastMessageContent); //result from vdb
+  console.log("lastDataWithoutLastMessage" + lastDataWithoutLastMessage); // an array of last messages > assistant /
 
   // send request to OpenAI
   const completion = await openai.chat.completions.create({
@@ -76,7 +83,7 @@ export async function POST(req) {
       ...lastDataWithoutLastMessage,
       { role: 'user', content: lastMessageContent },
     ],
-    model: 'gpt-4o-mini',
+    model: 'gpt-4',
     stream: true,
   });
 
