@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { ThemeProvider, Box } from "@mui/material";
-import { ClerkProvider } from "@clerk/nextjs";
-import Head from "next/head";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Theme from "./components/theme";
-import Hero from "./components/hero";
+import { ThemeProvider, Box } from '@mui/material';
+import Head from 'next/head';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
+import Theme from './components/theme';
+import Hero from './components/hero';
+import FeaturesAI from './features.js/page';
 
 export default function Home() {
   return (
@@ -23,11 +23,13 @@ export default function Home() {
         }}
         width="100%"
         height="100%"
-      ></Box>
+      >
+        <Navbar></Navbar>
+        <Hero></Hero>
+        <FeaturesAI></FeaturesAI>
 
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <Footer></Footer>
+        <Footer></Footer>
+      </Box>
     </ThemeProvider>
   );
 }
