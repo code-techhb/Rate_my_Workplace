@@ -79,7 +79,7 @@ export default function Home() {
       <Box
         width="100wh"
         height="100vh"
-        backgroundColor="background.default"
+        sx={{ bgcolor: Theme.palette.primary.main }}
         display="flex"
         alignItems="center"
         justifyContent="center"
@@ -121,20 +121,28 @@ export default function Home() {
               >
                 <Avatar
                   sx={{
-                    bgcolor: 'primary.main',
+                    bgcolor: Theme.palette.text.yellow,
                     width: 50,
                     height: 50,
                   }}
-                  src={message.role === 'assistant' ? 'logo.png' : ''}
+                  src={message.role === 'assistant' ? 'advisor.png' : ''}
                 />
                 <Typography
                   sx={{
                     bgcolor:
                       message.role === 'assistant'
-                        ? 'primary.main'
-                        : 'primary.userChat',
+                        ? Theme.palette.primary.dark
+                        : Theme.palette.primary.beige2,
+                    color:
+                      message.role === 'assistant'
+                        ? Theme.palette.text.light
+                        : Theme.palette.text.black,
                     borderRadius: '12px',
                     padding: '20px',
+                    whiteSpace: 'normal', // Ensures that text wraps and doesn't overflow
+                    wordBreak: 'break-word', // Ensures long words break to fit the container
+                    overflowWrap: 'break-word', // Ensures that text breaks at the end of lines
+                    maxWidth: '100%', // Limits width to the container's width
                   }}
                 >
                   <MuiMarkdown>{message.content}</MuiMarkdown>
@@ -171,6 +179,10 @@ export default function Home() {
                 borderRadius: '20px',
                 px: '15px',
                 width: '120px',
+                fontFamily: 'Poppins',
+                bgcolor: Theme.palette.text.dark,
+                fontWeight: 'Bold',
+                color: Theme.palette.text.light,
                 border: (theme) => `1px solid ${theme.palette.primary.border}`,
                 textAlign: 'right',
               }}

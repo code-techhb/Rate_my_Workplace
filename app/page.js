@@ -21,15 +21,15 @@ export default function Home() {
         sx={{
           background: Theme.palette.primary.main,
         }}
-        width="100vw"
-        height="100vh"
-      ></Box>
+        width="100%"
+        height="100%"
+      >
+        <Navbar></Navbar>
+        <Hero></Hero>
+        <FeaturesAI></FeaturesAI>
 
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <FeaturesAI></FeaturesAI>
-
-      <Footer></Footer>
+        <Footer></Footer>
+      </Box>
     </ThemeProvider>
   );
 }

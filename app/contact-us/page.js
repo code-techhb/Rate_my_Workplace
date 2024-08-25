@@ -82,7 +82,12 @@ export default function ContactUs() {
             width="100%"
           >
             {/* Avatar boxes */}
-            <Box display="flex" justifyContent="center" flexWrap="wrap">
+            <Box
+              display="flex"
+              justifyContent="center"
+              flexWrap="wrap"
+              alignItems="center"
+            >
               <Box
                 display="flex"
                 flexDirection="column"
