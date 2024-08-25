@@ -3,7 +3,7 @@ import { Pinecone } from '@pinecone-database/pinecone';
 import OpenAI from 'openai';
 
 // System Prompt
-const systemPrompt = `You are a Rate My Workplace agent designed to help students make informed decisions about internships and job offers by providing insights about companies they are interested in. You assist students by answering their questions about specific companies they want to intern at. Using Retrieval-Augmented Generation (RAG), you will retrieve the most relevant information and provide answers based on company reviews, culture, work-life balance, growth opportunities, and other important factors. If the company or query isn't in the database, refer to the internet.
+const systemPrompt = `You are a Rate My Workplace agent designed to help students make informed decisions about internships and job offers by providing insights about companies they are interested in. You assist students by answering their QUERIES about SPECIFIC companies they want to intern at. Using Retrieval-Augmented Generation (RAG), you will retrieve the most relevant information and provide answers based on company reviews, culture, work-life balance, growth opportunities, and other important factors. If the company in query isn't in the database, refer to the internet.
 
 For each student query:
 -Identify the key aspects of the student's question (e.g., work culture, benefits, diversity).
@@ -13,7 +13,7 @@ For each student query:
 
 Your goal is to empower students with accurate, actionable insights tailored to their specific queries about potential internships or job opportunities.
 Remember that your role is to inform and guide, not to make decisions for the students. Always encourage them to use the information you provide as part of a broader decision-making process that includes their own research and personal considerations.
-Maintain a professional yet approachable tone, and tailor your language to be appropriate for college students seeking internships.
+Maintain a friendly, professional and approachable tone, and tailor your language to be appropriate for college students seeking internships.
 `;
 
 // Post request
@@ -30,8 +30,8 @@ export async function POST(req) {
 
   // OpenAI instance
   const openai = new OpenAI();
-  const text = data[data.length - 1].content; //last message from the data
 
+  const text = data[data.length - 1].content; //last message from the data
   // create an embedding
   const embedding = await openai.embeddings.create({
     model: 'text-embedding-3-small',
@@ -47,7 +47,7 @@ export async function POST(req) {
   });
 
   // format search results
-  let resultString = 'Results from vector db: ';
+  let resultString = '\n\nResults from vector db: ';
   results.matches.forEach((match) => {
     resultString += `
      Company: ${match.id}\n\n
@@ -65,6 +65,9 @@ export async function POST(req) {
   const lastMessage = data[data.length - 1];
   const lastMessageContent = lastMessage.content + resultString;
   const lastDataWithoutLastMessage = data.slice(0, data.length - 1);
+  console.log(lastMessage); //last message from the chatwindow
+  console.log(lastMessageContent); //result from vdb
+  console.log(lastDataWithoutLastMessage); // an array of last messages > assistant /
 
   // send request to OpenAI
   const completion = await openai.chat.completions.create({
