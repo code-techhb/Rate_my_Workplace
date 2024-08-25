@@ -46,30 +46,39 @@ export async function POST(req) {
     vector: embedding.data[0].embedding,
   });
 
-  // format search results
-  let resultString = '\n\nResults from vector db: ';
-  results.matches.forEach((match) => {
-    resultString += `
-     Company: ${match.id}\n\n
-     Work-Life Balance:${match.metadata['Work-Life Balance']}\n
-     Compensation and Benefits:${match.metadata['Compensation and Benefits']}\n
-     Career Growth and Development Opportunities:${match.metadata['Career Growth and Development Opportunities']}\n
-     Company Culture:${match.metadata['Company Culture']}\n
-     Leadership and Management:${match.metadata['Leadership and Management']}\n
-     Stars:${match.metadata['Stars']}\n
-     \n\n\n
-     `;
-  });
+  // Check if the VDB returned any meaningful results
+  let relevantResults =
+    results.matches &&
+    results.matches.length > 0 &&
+    results.matches.some((match) => match.score > 0.5);
 
-  // construction of the conversation data
+  let resultString = '';
+  if (relevantResults) {
+    // Format VDB results if relevant
+    resultString = '\n\nResults from vector db: ';
+    results.matches.forEach((match) => {
+      resultString += `
+        Company: ${match.id}\n
+        Work-Life Balance: ${match.metadata['Work-Life Balance']}\n
+        Compensation and Benefits: ${match.metadata['Compensation and Benefits']}\n
+        Career Growth and Development Opportunities: ${match.metadata['Career Growth and Development Opportunities']}\n
+        Company Culture: ${match.metadata['Company Culture']}\n
+        Leadership and Management: ${match.metadata['Leadership and Management']}\n
+        Stars: ${match.metadata['Stars']}\n\n\n
+     `;
+    });
+  } else {
+    // If no relevant results, add a message indicating reliance on general knowledge
+    resultString =
+      "\n\nNo relevant results were found in the database. Here's what I know based on general information:";
+  }
+
+  // Construct the conversation data
   const lastMessage = data[data.length - 1];
   const lastMessageContent = lastMessage.content + resultString;
   const lastDataWithoutLastMessage = data.slice(0, data.length - 1);
-  console.log(lastMessage); //last message from the chatwindow
-  console.log(lastMessageContent); //result from vdb
-  console.log(lastDataWithoutLastMessage); // an array of last messages > assistant /
 
-  // send request to OpenAI
+  // Send request to OpenAI
   const completion = await openai.chat.completions.create({
     messages: [
       { role: 'system', content: systemPrompt },
@@ -80,7 +89,7 @@ export async function POST(req) {
     stream: true,
   });
 
-  // stream the response from openAi
+  // Stream the response from OpenAI
   const stream = new ReadableStream({
     async start(controller) {
       const encoder = new TextEncoder();
@@ -101,6 +110,6 @@ export async function POST(req) {
     },
   });
 
-  // send result of request back to client
+  // Send result of request back to client
   return new NextResponse(stream);
 }
