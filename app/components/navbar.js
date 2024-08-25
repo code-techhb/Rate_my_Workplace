@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, Button, Box, ThemeProvider } from "@mui/material";
-import theme from "./theme";
+import Theme from "./theme";
 import {
   SignedIn,
   SignedOut,
@@ -47,11 +47,11 @@ const Navbar = () => {
   // _____________________________ Nav Bar UI _____________________________
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
       <AppBar
         position="static"
         sx={{
-          backgroundColor: "transparent",
+          backgroundColor: Theme.palette.primary.main,
           boxShadow: "none",
         }}
       >
@@ -73,6 +73,17 @@ const Navbar = () => {
                 />
               </a>
             </Box>
+            <Button
+              variant="outlined"
+              sx={{
+                borderRadius: "16px",
+                boxShadow: "none",
+                backgroundColor: Theme.palette.primary.dark,
+              }}
+              onClick={handleRedirectChatbot}
+            >
+              Chat with AI
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
