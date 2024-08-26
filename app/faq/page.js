@@ -49,7 +49,6 @@ export default function Home() {
             fontStyle: 'normal',
             fontWeight: 800,
             color: Theme.palette.text.dark,
-            marginBottom: 0
           }}>
           Do you have questions?
         </Typography>
@@ -62,22 +61,15 @@ export default function Home() {
                 fontWeight: 400,
                 marginTop:0,
                 color: Theme.palette.text.dark,
+
               }}
         >
           We have answers (well, most of the time)
         </Typography>
 
         {/* Description */}
-        <Typography variant="h2" align="center" spacing={2} width="100%" maxWidth="800px"
-              sx={{
-                fontFamily: 'Paytone One',
-                fontSize: '20px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                color: Theme.palette.text.light,
-                mt: 2,
-                
-              }}>
+        <Typography variant="body1" fontSize={21} width="100%" maxWidth="800px" align="center" marginTop={2}
+              >
           Below you'll find answers to the most common questions you may have on Rate My WorkPlace. Also, please feel free to check our contact Us page if you still can't find the answers that you're looking for. 
         </Typography>
 
@@ -133,7 +125,7 @@ export default function Home() {
         </IconButton>
       </Box>
       <Collapse in={expanded[index]}>
-        <Typography variant="body2" paddingLeft={2} paddingTop={1}>
+        <Typography variant="body1" fontSize={15} paddingLeft={2} paddingTop={1}>
           {faq.answer}
         </Typography>
       </Collapse>
