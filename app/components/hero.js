@@ -35,10 +35,9 @@ const Hero = () => {
             >
               Rate My Workplace
             </Typography>
+
             <Typography variant="body1" fontSize={19}>
-              Here’s a shorter version: Our AI-driven app gives personalized
-              recommendations based on ratings and career development, helping
-              you choose the right workplace with the insights you need.
+              Discover Your Ideal Workplace with AI-Powered Insights
             </Typography>
 
             <Button

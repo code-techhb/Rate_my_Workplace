@@ -23,18 +23,6 @@ const Navbar = () => {
     router.push('/faq');
   };
 
-  // __________________________ redirect if signed in_____________________
-  //   useEffect(() => {
-  //     if (isSignedIn) {
-  //       const hasRedirected = localStorage.getItem("hasRedirected");
-
-  //       if (!hasRedirected) {
-  //         router.push("/generateCards");
-  //         localStorage.setItem("hasRedirected", "true");
-  //       }
-  //     }
-  //   }, [isSignedIn, router]);
-
   // _____________________________ Nav Bar UI _____________________________
 
   return (
@@ -110,7 +98,6 @@ const Navbar = () => {
               >
                 Contact US
               </Button>
-              
             </Box>
           </Box>
         </Toolbar>
