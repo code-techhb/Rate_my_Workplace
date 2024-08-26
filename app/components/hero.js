@@ -11,7 +11,7 @@ const Hero = () => {
         alignItems="center"
         gap={4}
         p={3}
-        sx={{ background: Theme.palette.primary.main }}
+        //sx={{ background: Theme.palette.primary.main }}
       >
         <Box
           display="flex"

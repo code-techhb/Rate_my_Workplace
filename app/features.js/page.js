@@ -16,7 +16,7 @@ const FeaturesAI = () => {
       <Box
         padding="60px 20px"
         sx={{
-          backgroundColor: Theme.palette.primary.main,
+          //backgroundColor: Theme.palette.primary.main,
           textAlign: 'center',
           display: 'flex',
           justifyContent: 'center',
