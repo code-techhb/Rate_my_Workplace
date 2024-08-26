@@ -88,36 +88,37 @@ export default function Home() {
           
         <Box>
   {[{
-    question: "What is 'Rate My Workplace'?",
-    answer: '"Rate My Workplace" is a platform where employees can anonymously share their experiences and rate their workplaces. The goal is to provide insights and transparency about various companies\' work environments.',
+    question: "Can I submit my own review on Rate My Workplace?",
+    answer: "No, 'Rate My Workplace' does not accept user-submitted reviews. Instead, the platform uses AI to provide feedback based on a curated list of reviews already in our database.",
   }, {
-    question: "How can I submit a rating or review?",
-    answer: 'To submit a rating or review, simply navigate to the review section of the site. Fill out the required fields with your feedback, select a rating, and submit. Your review will be processed and added to the database.',
+    question: "How does the AI chatbot provide feedback?",
+    answer: "The AI chatbot uses advanced algorithms and Pinecone's vector search to analyze reviews in our database and offer personalized feedback based on your queries.",
   }, {
-    question: "Can I remain anonymous when submitting a review?",
-    answer: 'Yes, all reviews are submitted anonymously to protect your privacy. We do not collect personal information that could identify you.',
+    question: "What kind of career advice can the chatbot provide?",
+    answer: "The chatbot can offer insights on various career paths, company cultures, and workplace environments based on the data stored in our database.",
   }, {
-    question: "How do you ensure the authenticity of reviews?",
-    answer: 'We use a combination of automated and manual moderation processes to review and verify submissions. This helps ensure that the feedback we publish is authentic and valuable.',
+    question: "How accurate is the feedback provided by the chatbot?",
+    answer: "The feedback is based on real reviews and AI-driven analysis, aiming to provide reliable and relevant insights. However, it's always good to use this information as one of many resources in your decision-making process.",
   }, {
-    question: "How can I contact support if I have an issue?",
-    answer: 'If you have any issues or questions, please use the "Contact Us" section on the site. Fill out the contact form, and our support team will get back to you as soon as possible.',
+    question: "Is the information provided by the chatbot confidential?",
+    answer: "Yes, the information you provide to the chatbot is confidential and is not stored or shared. The chatbot's responses are generated based on existing data in the database.",
   }, {
-    question: "Can I edit or delete my review after submission?",
-    answer: 'Once a review is submitted, it cannot be edited or deleted by the user. If you need to make changes, please contact our support team with the details of your request.',
+    question: "How is Pinecone used on this platform?",
+    answer: "Pinecone is utilized for managing and searching vector embeddings of our review data, enabling the AI chatbot to retrieve accurate and contextually relevant feedback.",
   }, {
-    question: "How is the data used by the chatbot?",
-    answer: 'The chatbot uses semantic search embeddings to provide relevant responses based on the data stored in our database. It helps users find information quickly and accurately by understanding the context of their queries.',
+    question: "Can the chatbot compare multiple companies for career advice?",
+    answer: "Yes, you can ask the chatbot to compare different companies, and it will provide feedback based on the reviews and data available in our database.",
   }, {
-    question: "What is Pinecone, and how is it used here?",
-    answer: 'Pinecone is a vector database used for semantic search. We use Pinecone to manage and search the embeddings of our data, allowing the chatbot to retrieve and provide precise answers based on user queries.',
+    question: "Is the chatbot free to use?",
+    answer: "Yes, the chatbot is completely free to use for obtaining feedback and career advice.",
   }, {
-    question: "Can I rate multiple workplaces?",
-    answer: 'Yes, you can rate multiple workplaces. Each review is considered individually and contributes to the overall rating of the respective workplace.',
+    question: "What types of companies are included in your database?",
+    answer: "Our database includes reviews and feedback on a wide range of companies, from startups to large corporations, across various industries.",
   }, {
-    question: "How can I provide feedback about the website?",
-    answer: 'If you have feedback about the website, please use the "Contact Us" section to share your thoughts. We welcome suggestions and comments to help improve our platform.',
-  }].map((faq, index) => (
+    question: "Can the chatbot provide feedback on specific roles within a company?",
+    answer: "Yes, the chatbot can provide insights on specific roles within a company based on the data available, helping you make more informed career decisions.",
+}]
+.map((faq, index) => (
     <Box key={index} marginBottom={3}>
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Typography variant="h6">{faq.question}</Typography>
@@ -139,7 +140,6 @@ export default function Home() {
 
         
       </Box>
-      <FeaturesAI></FeaturesAI>
 
 <Footer></Footer> 
     </ThemeProvider>
