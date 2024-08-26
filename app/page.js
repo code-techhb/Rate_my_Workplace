@@ -7,7 +7,7 @@ import Footer from './components/footer';
 import Theme from './components/theme';
 import Hero from './components/hero';
 import FeaturesAI from './features.js/page';
-
+import GradientOverlay from './components/gradientOverlay';
 export default function Home() {
   return (
     // MUI coming soon
@@ -25,10 +25,12 @@ export default function Home() {
         height="100%"
       >
         <Navbar></Navbar>
-        <Hero></Hero>
-        <FeaturesAI></FeaturesAI>
-
-        <Footer></Footer>
+        <GradientOverlay />
+        <Box sx={{ position: 'relative', zIndex: 2, flex: 1 }}>
+          <Hero />
+          <FeaturesAI />
+        </Box>
+        <Footer />
       </Box>
     </ThemeProvider>
   );

@@ -16,6 +16,10 @@ const Theme = createTheme({
       yellow: '#F3B846',
       darkYellow: '#EA8C00',
     },
+    background: {
+      gradient:
+        'radial-gradient(circle, rgba(173,216,230,0.7) 0%, rgba(221,160,221,0.7) 100%)',
+    },
   },
 
   typography: {
