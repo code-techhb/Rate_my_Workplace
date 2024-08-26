@@ -52,6 +52,7 @@ export default function Home() {
             fontStyle: 'normal',
             fontWeight: 800,
             color: Theme.palette.text.dark,
+            marginTop: '80px',
           }}
         >
           Do you have questions?
