@@ -20,7 +20,7 @@ export default function Home() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: `Hey! I am your AI advisor, here to help you find the perfect spot for your internship, first job 😊`,
+      content: `Hey! I'm your AI assistant here to help you make informed decisions about internships and job offers by providing insights on companies you're interested in —let's find the perfect fit for you!😊`,
     },
   ]);
 
@@ -70,6 +70,7 @@ export default function Home() {
       });
     });
   };
+
   // ----------------- UI --------------------------
   return (
     <ThemeProvider theme={Theme}>
@@ -77,19 +78,19 @@ export default function Home() {
       <Navbar></Navbar>
 
       <Box
-        width="100wh"
+        // width="100wh"
         height="100vh"
         sx={{ bgcolor: Theme.palette.primary.main }}
         display="flex"
         alignItems="center"
         justifyContent="center"
-        gap={3}
+        gap={2}
       >
         {/* chat window */}
         <Stack
           sx={{
             height: '700px',
-            width: '55%', // change this later
+            width: '60%', // change this later
             borderRadius: '12px',
           }}
         >
@@ -100,18 +101,18 @@ export default function Home() {
               flexGrow: '1',
               borderRadius: '12px',
               height: '85%',
-              border: (theme) => `1px solid ${theme.palette.primary.border}`,
+              border: (theme) => `1px solid ${theme.palette.primary.dark}`,
               marginBottom: '15px',
               overflow: 'auto',
               boxShadow: '1',
             }}
           >
-            {/* Chat  */}
+            {/* Chat box */}
             {messages.map((message, index) => (
               <Stack
                 key={index}
                 direction="row"
-                spacing={3}
+                spacing={2}
                 flexDirection="row"
                 alignItems="center"
                 padding="20px"
@@ -121,7 +122,7 @@ export default function Home() {
               >
                 <Avatar
                   sx={{
-                    bgcolor: Theme.palette.text.yellow,
+                    bgcolor: Theme.palette.text.darker,
                     width: 50,
                     height: 50,
                   }}
@@ -138,7 +139,7 @@ export default function Home() {
                         ? Theme.palette.text.light
                         : Theme.palette.text.black,
                     borderRadius: '12px',
-                    padding: '20px',
+                    padding: '30px',
                     whiteSpace: 'normal', // Ensures that text wraps and doesn't overflow
                     wordBreak: 'break-word', // Ensures long words break to fit the container
                     overflowWrap: 'break-word', // Ensures that text breaks at the end of lines
@@ -159,7 +160,7 @@ export default function Home() {
               backgroundColor: 'background.default',
               padding: '10px',
               borderRadius: '12px',
-              border: (theme) => `1px solid ${theme.palette.primary.border}`,
+              border: (theme) => `1px solid ${theme.palette.primary.dark}`,
               boxShadow: '1',
             }}
           >
@@ -183,7 +184,7 @@ export default function Home() {
                 bgcolor: Theme.palette.text.dark,
                 fontWeight: 'Bold',
                 color: Theme.palette.text.light,
-                border: (theme) => `1px solid ${theme.palette.primary.border}`,
+                border: (theme) => `1px solid ${theme.palette.primary.dark}`,
                 textAlign: 'right',
               }}
               onClick={sendMessage}
