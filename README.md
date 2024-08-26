@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rate My Workplace AI App
 
-## Getting Started
+## Overview
+Rate My Workplace is an AI-powered platform designed to help students make informed decisions about internships and job offers by providing personalized insights on companies. Using cutting-edge technology, including Retrieval-Augmented Generation (RAG) and AI-powered recommendations, our app retrieves relevant data on workplace culture, growth opportunities, and other important factors to deliver actionable insights tailored to the user's preferences.
 
-First, run the development server:
+## Features
+- AI-Powered Recommendations
+Our AI-driven system matches your preferences and work style with workplaces that suit you best. Using an ever-growing database, we provide the latest, most relevant recommendations tailored to your needs.
+- Effortless Experience
+We prioritize simplicity. Our intuitive platform makes rating workplaces and exploring options effortless, allowing you to focus on finding the perfect fit without any unnecessary complexity.
+- Personalized Insights
+Get detailed insights and reviews based on your specific criteria. Our system offers a clear overview of how each workplace aligns with your personal needs and expectations, helping you make informed decisions.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies used
+- Next.js: The framework used to build the front-end and API routes.
+- OpenAI GPT-4: Powers the natural language understanding and generation to provide intelligent responses.
+- Pinecone: Vector database for fast and accurate retrieval of company-related data based on embeddings.
+- Material-UI: Utilized for the styling and layout of the UI components.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
+- Users can interact with the AI by submitting queries about companies they are interested in.
+- The AI will analyze the query, retrieve relevant data from the vector database, and provide personalized recommendations based on the user’s needs.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## What to expect 
+Demo: [coming soon ]
