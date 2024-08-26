@@ -15,6 +15,8 @@ import {
 import Theme from '../components/theme';
 import Navbar from '../components/navbar';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Footer from '../components/footer';
+import FeaturesAI from '../features.js/page';
 
 export default function Home() {
   // State to manage expanded questions
@@ -58,8 +60,7 @@ export default function Home() {
                 fontFamily: 'Paytone One',
                 fontSize: '30px',
                 fontStyle: 'normal',
-                fontWeight: 400,
-                marginTop:0,
+                margin: 3,
                 color: Theme.palette.text.dark,
 
               }}
@@ -135,7 +136,12 @@ export default function Home() {
 
 
         </Stack>
+
+        
       </Box>
+      <FeaturesAI></FeaturesAI>
+
+<Footer></Footer> 
     </ThemeProvider>
   );
 }

@@ -19,6 +19,9 @@ const Navbar = () => {
   const handleRedirectContactUs = () => {
     router.push('/contact-us');
   };
+  const handleRedirectFaq = () => {
+    router.push('/faq');
+  };
 
   // __________________________ redirect if signed in_____________________
   //   useEffect(() => {
@@ -88,10 +91,26 @@ const Navbar = () => {
                     textDecoration: 'underline', // Add underline on hover
                   },
                 }}
+                onClick={handleRedirectFaq}
+              >
+                FAQ
+              </Button>
+              <Button
+                variant="outlined"
+                sx={{
+                  boxShadow: 'none',
+                  fontFamily: 'Poppins',
+                  color: Theme.palette.text.dark,
+                  textDecoration: 'none', // Ensure no underline by default
+                  '&:hover': {
+                    textDecoration: 'underline', // Add underline on hover
+                  },
+                }}
                 onClick={handleRedirectContactUs}
               >
                 Contact US
               </Button>
+              
             </Box>
           </Box>
         </Toolbar>
