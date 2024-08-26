@@ -107,9 +107,9 @@ export default function Home() {
                   '"Rate My Workplace" is a platform where employees can anonymously share their experiences and rate their workplaces. The goal is to provide insights and transparency about various companies\' work environments.',
               },
               {
-                question: 'How can I submit a rating or review?',
-                answer:
-                  'To submit a rating or review, simply navigate to the review section of the site. Fill out the required fields with your feedback, select a rating, and submit. Your review will be processed and added to the database.',
+                question: 'Can I submit my own review on "Rate My Workplace"?',
+                answer: `No, "Rate My Workplace" does not accept user-submitted reviews. Instead, the platform uses AI to provide feedback based on a curated list of reviews already in our database.
+`,
               },
               {
                 question: 'Can I remain anonymous when submitting a review?',
