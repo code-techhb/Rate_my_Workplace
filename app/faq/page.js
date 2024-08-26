@@ -177,7 +177,6 @@ export default function Home() {
           </Box>
         </Stack>
       </Box>
-      <FeaturesAI></FeaturesAI>
 
       <Footer></Footer>
     </ThemeProvider>
